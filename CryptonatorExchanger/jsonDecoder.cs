@@ -10,6 +10,7 @@ namespace CryptonatorExchanger
 {
     class jsonDecoder
     {
+        //Decodes the json
         public void decodeJson(string json)
         {            
             cryptonator crypt = new cryptonator();

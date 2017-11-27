@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CryptonatorExchanger
 {
-   
+   //object class for the http return data 
         public class Market
         {
             public string market { get; set; }

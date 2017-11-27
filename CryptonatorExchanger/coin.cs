@@ -8,6 +8,7 @@ namespace CryptonatorExchanger
 {
     class coin
     {
+        //a coin class where the different coins are saved
         private string coinName;
         private string coinShort;
         private bool coinActive;

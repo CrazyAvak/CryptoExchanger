@@ -8,5 +8,6 @@ namespace CryptonatorExchanger
 {
     class Exchanger
     {
+        //main logic class
     }
 }
