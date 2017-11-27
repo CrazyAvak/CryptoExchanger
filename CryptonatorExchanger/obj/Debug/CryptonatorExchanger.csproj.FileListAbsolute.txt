@@ -1,0 +1,11 @@
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\bin\Debug\CryptonatorExchanger.exe.config
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\bin\Debug\CryptonatorExchanger.exe
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\bin\Debug\CryptonatorExchanger.pdb
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\bin\Debug\Newtonsoft.Json.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\bin\Debug\Newtonsoft.Json.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.csprojResolveAssemblyReference.cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.Properties.Resources.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.csproj.GenerateResource.Cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.csproj.CoreCompileInputs.cache
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.exe
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\CryptonatorExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.pdb
