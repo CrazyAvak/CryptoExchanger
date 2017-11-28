@@ -20,3 +20,13 @@ C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\Cryptonator
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.csproj.CoreCompileInputs.cache
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.exe
 C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.pdb
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\obj\Debug\CryptonatorExchanger.Form1.resources
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\EntityFramework.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\System.Data.SQLite.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\EntityFramework.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\System.Data.SQLite.xml
+C:\Users\larsb\Documents\Visual Studio 2017\Projects\cryptoExchanger\CryptonatorExchanger\bin\Debug\System.Data.SQLite.dll.config

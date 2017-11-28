@@ -17,6 +17,7 @@ namespace CryptonatorExchanger
         public Form1()
         {
             InitializeComponent();
+            exchanger = new Exchanger();
             apiRequest request = new apiRequest();
             exchanger = new Exchanger();
             request.request("btc", "usd");
@@ -24,11 +25,27 @@ namespace CryptonatorExchanger
             time.Interval = 30000;
             time.Tick += Time_Tick;
             time.Enabled = true;
+            sqlLiteDB db = new sqlLiteDB();            
+            fillGUI();
+           
+        }
+
+        private void fillGUI()
+        {
+            foreach (coin coin in exchanger.Coins)
+            {
+                if(coin.CoinActive == true)
+                {
+                    comboBoxCur1.Items.Add(coin.CoinName);
+                    comboBoxCur2.Items.Add(coin.CoinName);
+                }
+            }
         }
 
         private void Time_Tick(object sender, EventArgs e)
         {
             //every 30 seconds call the exchanger methods for an exchange            
         }
+       
     }
 }

@@ -28,68 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxCur1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCur2 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxCur1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 172);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxCur1.FormattingEnabled = true;
+            this.comboBoxCur1.Location = new System.Drawing.Point(80, 142);
+            this.comboBoxCur1.Name = "comboBoxCur1";
+            this.comboBoxCur1.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCur1.TabIndex = 0;
             // 
-            // comboBox2
+            // comboBoxCur2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(212, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Currency 1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(209, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Currency 2";
+            this.comboBoxCur2.FormattingEnabled = true;
+            this.comboBoxCur2.Location = new System.Drawing.Point(223, 142);
+            this.comboBoxCur2.Name = "comboBoxCur2";
+            this.comboBoxCur2.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxCur2.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCur2);
+            this.Controls.Add(this.comboBoxCur1);
             this.Name = "Form1";
             this.Text = "CryptoExchanger";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxCur1;
+        private System.Windows.Forms.ComboBox comboBoxCur2;
     }
 }
 
