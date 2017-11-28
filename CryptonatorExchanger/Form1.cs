@@ -24,7 +24,7 @@ namespace CryptonatorExchanger
             time = new Timer();
             time.Interval = 30000;
             time.Tick += Time_Tick;
-            time.Enabled = true;
+            
             sqlLiteDB db = new sqlLiteDB();            
             fillGUI();
            
@@ -46,6 +46,32 @@ namespace CryptonatorExchanger
         {
             //every 30 seconds call the exchanger methods for an exchange            
         }
-       
+
+        private void comboBoxCur2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelAmount2.Text = "Coin Amount: " + exchanger.getAmount(comboBoxCur2.SelectedItem.ToString()) ;
+        }
+
+        private void comboBoxCur1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelAmount1.Text = "Coin Amount: " + exchanger.getAmount(comboBoxCur1.SelectedText);            
+        }
+      
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            if (time.Enabled == true)
+            {
+                time.Enabled = false;
+                labelExchangeActive.BackColor = Color.Red;
+                buttonStart.Text = "Start exchange";
+            }
+            else
+            {
+                time.Enabled = true;
+                labelExchangeActive.BackColor = Color.Green;
+                buttonStart.Text = "Stop exchange";
+            }
+        }
     }
 }

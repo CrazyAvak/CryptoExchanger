@@ -10,6 +10,8 @@ namespace CryptonatorExchanger
     {
         List<coin> coins;
         sqlLiteDB db;
+
+        internal List<coin> Coins { get => coins; set => coins = value; }
         //main logic class
         public Exchanger()
         {
@@ -17,6 +19,16 @@ namespace CryptonatorExchanger
             Coins = db.getCoin();
         }
 
-        internal List<coin> Coins { get => coins; set => coins = value; }
+        public double getAmount(string coinName)
+        {
+            foreach (coin item in Coins)
+            {
+                if(item.CoinName == coinName)
+                {
+                    return Convert.ToDouble(item.CointAmount);
+                }
+            }
+            return 0;
+        }        
     }
 }
