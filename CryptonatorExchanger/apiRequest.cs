@@ -10,10 +10,11 @@ namespace CryptonatorExchanger
 {
     class apiRequest
     {
-        public void request(string cur1, string cur2)
+        public cryptonator request(string cur1, string cur2)
         {
             string html = string.Empty;
             string url = "https://api.cryptonator.com/api/full/" + cur1 + "-" + cur2 + "" ;
+            Console.WriteLine(url);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
 
@@ -24,8 +25,9 @@ namespace CryptonatorExchanger
                 html = reader.ReadToEnd();
             }
             jsonDecoder json = new jsonDecoder();
-            json.decodeJson(html);
             Console.WriteLine(html);
+            return json.decodeJson(html);
+            
         }
     }
 }

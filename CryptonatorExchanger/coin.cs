@@ -12,11 +12,11 @@ namespace CryptonatorExchanger
         private string coinName;
         private string coinShort;
         private bool coinActive;
-        private double cointAmount;
+        private decimal cointAmount;
 
         public string CoinName { get => coinName; set => coinName = value; }
         public string CoinShort { get => coinShort; set => coinShort = value; }
         public bool CoinActive { get => coinActive; set => coinActive = value; }
-        public double CointAmount { get => cointAmount; set => cointAmount = value; }
+        public decimal CointAmount { get => cointAmount; set => cointAmount = value; }
     }
 }

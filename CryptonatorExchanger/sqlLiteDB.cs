@@ -34,7 +34,7 @@ namespace CryptonatorExchanger
                 {
                     coin.CoinActive = false;
                 }
-                coin.CointAmount = Convert.ToInt32(reader["coinAmount"]);
+                coin.CointAmount = Convert.ToDecimal(reader["coinAmount"]);
                 coins.Add(coin);
             }
             dbConnection.Close();

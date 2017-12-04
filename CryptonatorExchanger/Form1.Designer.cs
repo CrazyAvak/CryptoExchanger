@@ -36,6 +36,9 @@
             this.labelAmount2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelExchangeActive = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelValue1 = new System.Windows.Forms.Label();
+            this.labelValue2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +63,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelValue1);
             this.groupBox1.Controls.Add(this.labelAmount1);
             this.groupBox1.Controls.Add(this.comboBoxCur1);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
@@ -80,6 +84,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.labelValue2);
             this.groupBox2.Controls.Add(this.labelAmount2);
             this.groupBox2.Controls.Add(this.comboBoxCur2);
             this.groupBox2.Location = new System.Drawing.Point(231, 97);
@@ -118,11 +123,40 @@
             this.labelExchangeActive.TabIndex = 4;
             this.labelExchangeActive.Text = "Exchanger is not active";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(203, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "->";
+            // 
+            // labelValue1
+            // 
+            this.labelValue1.AutoSize = true;
+            this.labelValue1.Location = new System.Drawing.Point(6, 29);
+            this.labelValue1.Name = "labelValue1";
+            this.labelValue1.Size = new System.Drawing.Size(62, 13);
+            this.labelValue1.TabIndex = 3;
+            this.labelValue1.Text = "Coin in usd:";
+            // 
+            // labelValue2
+            // 
+            this.labelValue2.AutoSize = true;
+            this.labelValue2.Location = new System.Drawing.Point(6, 29);
+            this.labelValue2.Name = "labelValue2";
+            this.labelValue2.Size = new System.Drawing.Size(62, 13);
+            this.labelValue2.TabIndex = 4;
+            this.labelValue2.Text = "Coin in usd:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelExchangeActive);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.groupBox2);
@@ -148,6 +182,9 @@
         private System.Windows.Forms.Label labelAmount2;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label labelExchangeActive;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelValue1;
+        private System.Windows.Forms.Label labelValue2;
     }
 }
 
