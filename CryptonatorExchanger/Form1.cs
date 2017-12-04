@@ -42,6 +42,7 @@ namespace CryptonatorExchanger
         private void Time_Tick(object sender, EventArgs e)
         {
             //every 30 seconds call the exchanger methods for an exchange
+
             apiRequest request = new apiRequest();
             request.request("btc", "usd");
         }

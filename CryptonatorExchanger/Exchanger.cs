@@ -37,10 +37,11 @@ namespace CryptonatorExchanger
         {
             //gives back an avarage value of a coin in euros;
             string convertCoin = "";
-            decimal amount = 0;           
-            cryptonator crypt = api.request(findCoin(coin).CoinShort, "usd");
             
-            decimal price = Convert.ToDecimal(crypt.ticker.price.Replace(".", ",")) * amount;
+            coin aCoin = findCoin(coin);
+            cryptonator crypt = api.request(aCoin.CoinShort, "usd");
+            
+            decimal price = Convert.ToDecimal(crypt.ticker.price.Replace(".", ",")) * aCoin.CointAmount;
             crypt.ticker.price = price.ToString();
             return crypt.ticker.price;           
         }
@@ -55,6 +56,11 @@ namespace CryptonatorExchanger
             }
             return null;
         }
+        private void exchangeHandler()
+        {
+
+        }
+
         private void buyCoin(string coin)
         {
 

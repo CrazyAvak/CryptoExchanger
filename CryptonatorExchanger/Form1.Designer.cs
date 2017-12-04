@@ -105,7 +105,7 @@
             // 
             // buttonStart
             // 
-            this.buttonStart.Location = new System.Drawing.Point(170, 203);
+            this.buttonStart.Location = new System.Drawing.Point(167, 203);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(103, 86);
             this.buttonStart.TabIndex = 3;

@@ -34,11 +34,30 @@ namespace CryptonatorExchanger
                 {
                     coin.CoinActive = false;
                 }
+                Console.WriteLine(reader["coinName"]  + " " + reader["coinAmount"]);
                 coin.CointAmount = Convert.ToDecimal(reader["coinAmount"]);
                 coins.Add(coin);
             }
             dbConnection.Close();
             return coins;
+        }                
+        public void updateSoldPrice()
+        {
+            dbConnection.Open();
+            string sql = "";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            dbConnection.Close();
+        }
+        public void updateBoughtPrice()
+        {
+            dbConnection.Open();
+            string sql = "";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            dbConnection.Close();        
         }
     }
 }
