@@ -31,14 +31,17 @@
             this.comboBoxCur1 = new System.Windows.Forms.ComboBox();
             this.comboBoxCur2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelValue1 = new System.Windows.Forms.Label();
             this.labelAmount1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labelValue2 = new System.Windows.Forms.Label();
             this.labelAmount2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelExchangeActive = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelValue1 = new System.Windows.Forms.Label();
-            this.labelValue2 = new System.Windows.Forms.Label();
+            this.textBoxFeed = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonCleanFeed = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +76,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Currency 1";
             // 
+            // labelValue1
+            // 
+            this.labelValue1.AutoSize = true;
+            this.labelValue1.Location = new System.Drawing.Point(6, 29);
+            this.labelValue1.Name = "labelValue1";
+            this.labelValue1.Size = new System.Drawing.Size(62, 13);
+            this.labelValue1.TabIndex = 3;
+            this.labelValue1.Text = "Coin in usd:";
+            // 
             // labelAmount1
             // 
             this.labelAmount1.AutoSize = true;
@@ -93,6 +105,15 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Currency 2";
+            // 
+            // labelValue2
+            // 
+            this.labelValue2.AutoSize = true;
+            this.labelValue2.Location = new System.Drawing.Point(6, 29);
+            this.labelValue2.Name = "labelValue2";
+            this.labelValue2.Size = new System.Drawing.Size(62, 13);
+            this.labelValue2.TabIndex = 4;
+            this.labelValue2.Text = "Coin in usd:";
             // 
             // labelAmount2
             // 
@@ -133,29 +154,42 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "->";
             // 
-            // labelValue1
+            // textBoxFeed
             // 
-            this.labelValue1.AutoSize = true;
-            this.labelValue1.Location = new System.Drawing.Point(6, 29);
-            this.labelValue1.Name = "labelValue1";
-            this.labelValue1.Size = new System.Drawing.Size(62, 13);
-            this.labelValue1.TabIndex = 3;
-            this.labelValue1.Text = "Coin in usd:";
+            this.textBoxFeed.Location = new System.Drawing.Point(323, 317);
+            this.textBoxFeed.Multiline = true;
+            this.textBoxFeed.Name = "textBoxFeed";
+            this.textBoxFeed.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxFeed.Size = new System.Drawing.Size(393, 121);
+            this.textBoxFeed.TabIndex = 6;
             // 
-            // labelValue2
+            // label2
             // 
-            this.labelValue2.AutoSize = true;
-            this.labelValue2.Location = new System.Drawing.Point(6, 29);
-            this.labelValue2.Name = "labelValue2";
-            this.labelValue2.Size = new System.Drawing.Size(62, 13);
-            this.labelValue2.TabIndex = 4;
-            this.labelValue2.Text = "Coin in usd:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(320, 301);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Feed";
+            // 
+            // buttonCleanFeed
+            // 
+            this.buttonCleanFeed.Location = new System.Drawing.Point(641, 288);
+            this.buttonCleanFeed.Name = "buttonCleanFeed";
+            this.buttonCleanFeed.Size = new System.Drawing.Size(75, 23);
+            this.buttonCleanFeed.TabIndex = 8;
+            this.buttonCleanFeed.Text = "Clean feed";
+            this.buttonCleanFeed.UseVisualStyleBackColor = true;
+            this.buttonCleanFeed.Click += new System.EventHandler(this.buttonCleanFeed_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
+            this.Controls.Add(this.buttonCleanFeed);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxFeed);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelExchangeActive);
             this.Controls.Add(this.buttonStart);
@@ -185,6 +219,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelValue1;
         private System.Windows.Forms.Label labelValue2;
+        private System.Windows.Forms.TextBox textBoxFeed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonCleanFeed;
     }
 }
 

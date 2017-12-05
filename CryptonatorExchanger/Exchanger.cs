@@ -61,8 +61,32 @@ namespace CryptonatorExchanger
 
         }
 
-        private void buyCoin(string coin)
+        public string buyCoin(string coin1,string coin2)
         {
+
+            cryptonator crypt = api.request(findCoin(coin1).CoinShort, findCoin(coin2).CoinShort);
+
+            bool firstitem = true;
+            decimal marketPrice = 0;
+            if(crypt.ticker.markets.Count == 0)
+            {
+                return "No markets accepts this transaction";
+            }
+            foreach (Market item in crypt.ticker.markets)
+            {
+                
+                if(firstitem)
+                {
+                    marketPrice = Convert.ToDecimal(item.price.Replace(".", ","));
+                    firstitem = false;
+                }
+                if(Convert.ToDecimal( item.price.Replace(".", ",")) < marketPrice)
+                {
+                    marketPrice = Convert.ToDecimal(item.price.Replace(".", ","));
+                    Console.WriteLine(marketPrice.ToString());
+                }
+            }
+            return "transaction complete " + marketPrice.ToString();
 
         }
         private void sellCount()
