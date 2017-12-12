@@ -35,7 +35,7 @@ namespace CryptonatorExchanger
 
         public string getAverageEuroWorth(string coin)
         {
-            //gives back an avarage value of a coin in euros;
+            //gives back an avarage value of a coin in dollars;
             string convertCoin = "";
             
             coin aCoin = findCoin(coin);
@@ -47,6 +47,7 @@ namespace CryptonatorExchanger
         }
         private coin findCoin(string coin)
         {
+            //searches a coin object in the coinList 
             foreach (coin item in coins)
             {
                 if (item.CoinName == coin)
@@ -56,42 +57,64 @@ namespace CryptonatorExchanger
             }
             return null;
         }
-        private void exchangeHandler()
+        public string sell(string coin1)
         {
+            coin coins1 = findCoin(coin1);
+            coin coins2 = findCoin("US Dollar");
 
+            cryptonator crypt = api.request(coins1.CoinShort, coins2.CoinShort);
+         
+                bool first = true;
+                decimal sellPrice = 0;
+                string market  = "";
+                foreach (Market item in crypt.ticker.markets)
+                {
+                    decimal price = Convert.ToDecimal(item.price.Replace(".", ","));
+                    if (first)
+                    {
+                        sellPrice = price;
+                        market = item.market;
+                        first = false;
+                    }
+                    if(price > sellPrice)
+                    {
+                        sellPrice = price;
+                        market = item.market;
+                        
+                    }                               
+                }
+            coins2.CointAmount = coins2.CointAmount + coins1.CointAmount * sellPrice;
+            coins1.CointAmount = 0;
+            return "sold at a price of: " + sellPrice.ToString() + "at the market: " + market;
         }
 
-        public string buyCoin(string coin1,string coin2)
+        public string buy(string coin1)
         {
+            coin coins1 = findCoin(coin1);
+            coin coins2 = findCoin("US Dollar");
 
-            cryptonator crypt = api.request(findCoin(coin1).CoinShort, findCoin(coin2).CoinShort);
-
-            bool firstitem = true;
-            decimal marketPrice = 0;
-            if(crypt.ticker.markets.Count == 0)
-            {
-                return "No markets accepts this transaction";
-            }
+            cryptonator crypt = api.request(coins1.CoinShort, coins2.CoinShort);
+            bool first = true;
+            decimal buyPrice = 0;
+            string market = "";
             foreach (Market item in crypt.ticker.markets)
             {
-                
-                if(firstitem)
+                decimal price = Convert.ToDecimal(item.price.Replace(".", ","));
+                if (first)
                 {
-                    marketPrice = Convert.ToDecimal(item.price.Replace(".", ","));
-                    firstitem = false;
+                    buyPrice = price;
+                    market = item.market;
+                    first = false;
                 }
-                if(Convert.ToDecimal( item.price.Replace(".", ",")) < marketPrice)
+                if(price < buyPrice)
                 {
-                    marketPrice = Convert.ToDecimal(item.price.Replace(".", ","));
-                    Console.WriteLine(marketPrice.ToString());
+                    buyPrice = price;
+                    market = item.market;
                 }
             }
-            return "transaction complete " + marketPrice.ToString();
-
-        }
-        private void sellCount()
-        {
-
+            coins1.CointAmount = coins1.CointAmount + coins2.CointAmount / buyPrice;
+            coins2.CointAmount = 0;
+            return "Bought at a price of:" + buyPrice.ToString() + "at the market:" + market;
         }
     }
 }

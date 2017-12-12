@@ -38,10 +38,10 @@
             this.labelAmount2 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelExchangeActive = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxFeed = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCleanFeed = new System.Windows.Forms.Button();
+            this.labelusd = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,7 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Currency 2";
+            this.groupBox2.Visible = false;
             // 
             // labelValue2
             // 
@@ -144,16 +145,6 @@
             this.labelExchangeActive.TabIndex = 4;
             this.labelExchangeActive.Text = "Exchanger is not active";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(203, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "->";
-            // 
             // textBoxFeed
             // 
             this.textBoxFeed.Location = new System.Drawing.Point(323, 317);
@@ -182,15 +173,24 @@
             this.buttonCleanFeed.UseVisualStyleBackColor = true;
             this.buttonCleanFeed.Click += new System.EventHandler(this.buttonCleanFeed_Click);
             // 
+            // labelusd
+            // 
+            this.labelusd.AutoSize = true;
+            this.labelusd.Location = new System.Drawing.Point(605, 9);
+            this.labelusd.Name = "labelusd";
+            this.labelusd.Size = new System.Drawing.Size(33, 13);
+            this.labelusd.TabIndex = 9;
+            this.labelusd.Text = "USD:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 450);
+            this.Controls.Add(this.labelusd);
             this.Controls.Add(this.buttonCleanFeed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxFeed);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelExchangeActive);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.groupBox2);
@@ -216,12 +216,12 @@
         private System.Windows.Forms.Label labelAmount2;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label labelExchangeActive;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelValue1;
         private System.Windows.Forms.Label labelValue2;
         private System.Windows.Forms.TextBox textBoxFeed;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCleanFeed;
+        private System.Windows.Forms.Label labelusd;
     }
 }
 
