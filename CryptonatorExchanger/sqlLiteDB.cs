@@ -26,6 +26,7 @@ namespace CryptonatorExchanger
                 coin coin = new coin();
                 coin.CoinName = reader["coinName"].ToString();
                 coin.CoinShort = reader["coinShort"].ToString();
+                coin.CoindID = reader["coindID"].ToString();
                 if (reader["coinActive"].ToString() == "1")
                 {
                     coin.CoinActive = true;
@@ -41,23 +42,25 @@ namespace CryptonatorExchanger
             dbConnection.Close();
             return coins;
         }                
-        public void updateSoldPrice()
+
+        public void updateAmount(coin coin)
         {
             dbConnection.Open();
-            string sql = "";
+            //UPDATE COMPANY SET ADDRESS = 'Texas' WHERE ID = 6;
+            string sql = "UPDATE coin SET coinAmount = '" + coin.CointAmount + "' WHERE coindID = " + coin.CoindID ;
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
             dbConnection.Close();
         }
-        public void updateBoughtPrice()
+
+        public void updateDB(string sql)
         {
             dbConnection.Open();
-            string sql = "";
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
 
-            dbConnection.Close();        
+            dbConnection.Close();
         }
     }
 }

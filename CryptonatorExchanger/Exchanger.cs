@@ -85,6 +85,8 @@ namespace CryptonatorExchanger
                 }
             coins2.CointAmount = coins2.CointAmount + coins1.CointAmount * sellPrice;
             coins1.CointAmount = 0;
+            db.updateAmount(coins1);
+            db.updateAmount(coins2);
             return "sold at a price of: " + sellPrice.ToString() + "at the market: " + market;
         }
 
@@ -114,6 +116,8 @@ namespace CryptonatorExchanger
             }
             coins1.CointAmount = coins1.CointAmount + coins2.CointAmount / buyPrice;
             coins2.CointAmount = 0;
+            db.updateAmount(coins1);
+            db.updateAmount(coins2);
             return "Bought at a price of:" + buyPrice.ToString() + "at the market:" + market;
         }
     }

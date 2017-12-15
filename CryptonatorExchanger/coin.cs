@@ -10,6 +10,7 @@ namespace CryptonatorExchanger
     {
         //a coin class where the different coins are saved
         private string coinName;
+        private string coindID;
         private string coinShort;
         private bool coinActive;
         private decimal cointAmount;
@@ -22,5 +23,6 @@ namespace CryptonatorExchanger
         public decimal CointAmount { get => cointAmount; set => cointAmount = value; }
         public string SoldPrice { get => soldPrice; set => soldPrice = value; }
         public string BoughtPrice { get => boughtPrice; set => boughtPrice = value; }
+        public string CoindID { get => coindID; set => coindID = value; }
     }
 }
